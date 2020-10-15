@@ -20,6 +20,7 @@ namespace SnakeGame
             int dx = 1, dy = 0;
             int consoleWidthLimit = 79;
             int consoleHeightLimit = 24;
+            int score = 0;
 
             // clear to color
             Console.BackgroundColor = ConsoleColor.DarkGray;
@@ -38,7 +39,8 @@ namespace SnakeGame
                 ConsoleColor cc = Console.ForegroundColor;
                 Console.ForegroundColor = ConsoleColor.Black;
                 Console.SetCursorPosition(0, 0);
-                Console.WriteLine("Arrows move up/down/right/left. Press 'esc' quit.");
+                Console.WriteLine("Arrows move up/down/right/left. Press 'esc' quit.               Score:");
+                Console.write(score);
                 Console.SetCursorPosition(x, y);
                 Console.ForegroundColor = cc;
 
