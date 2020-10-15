@@ -11,7 +11,7 @@ namespace SnakeGame
             Console.ReadKey();
 
             // display this char on the console during the game
-            char ch = '*';
+            char ch = '***';
             bool gameLive = true;
             ConsoleKeyInfo consoleKey; // holds whatever key is pressed
 
