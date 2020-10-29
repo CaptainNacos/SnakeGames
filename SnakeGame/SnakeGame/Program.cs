@@ -6,13 +6,6 @@ namespace SnakeGame
 {
     class Program
     {
-
-
-
-
-
-
-
         static void Main(string[] args)
         {
             // start game
@@ -117,7 +110,6 @@ namespace SnakeGame
                             break;
                     }
                 }
-
                 // find the current position in the console grid & erase the character there if don't want to see the trail
                 Console.SetCursorPosition(x, y);
                
@@ -160,10 +152,6 @@ namespace SnakeGame
                     }
                 }
 
-
-
-
-
                 // calculate the new position
                 // note x set to 0 because we use the whole width, but y set to 1 because we use top row for instructions
                 prex = x;
@@ -191,14 +179,11 @@ namespace SnakeGame
                     foodY = rand.Next(1, consoleHeightLimit);
                 }
 
-              
-
                 if (obstacleX == foodX && obstacleY == foodY)
                 {
                     foodX = rand.Next(1, consoleWidthLimit);
                     foodY = rand.Next(1, consoleHeightLimit);
                 }
-
 
                 // If snake hit the obstacle
                 if (x == obstacleX && y == obstacleY)
@@ -207,13 +192,7 @@ namespace SnakeGame
                     Console.Write("You lost. Press any key to exit.");
                     // Do something here
                 }
-
-
-
-
                 // write the character in the new position
-
-
                 for (int i = 0; i < snakelength; i++)
                 {
                     if (moving == "UP" )
@@ -253,23 +232,11 @@ namespace SnakeGame
                         {
                             Console.SetCursorPosition(x + i, y);
                             Console.WriteLine(ch);
-
                         }
                     }
-
-
-
-
                 }
-
-
-
-
-
                 // pause to allow eyeballs to keep up
                 System.Threading.Thread.Sleep(delayInMillisecs);
-
-                
             } while (gameLive);
             }
     } } 
