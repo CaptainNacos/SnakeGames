@@ -61,6 +61,7 @@ namespace SnakeGame
                 Console.Write("+");
                 Console.SetCursorPosition(0, 0);
                 Console.WriteLine("Arrows move up/down/right/left. Press 'esc' quit.");
+                score = snakelength - 3;
                 Console.WriteLine("Score:"+score);
                 Console.SetCursorPosition(x, y);
                 Console.ForegroundColor = cc;
