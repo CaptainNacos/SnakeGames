@@ -12,6 +12,7 @@ namespace SnakeGame
 
             // display this char on the console during the game
             char ch = '*';
+            int score = 0;
             bool gameLive = true;
             ConsoleKeyInfo consoleKey; // holds whatever key is pressed
 
@@ -39,6 +40,7 @@ namespace SnakeGame
                 Console.ForegroundColor = ConsoleColor.Black;
                 Console.SetCursorPosition(0, 0);
                 Console.WriteLine("Arrows move up/down/right/left. Press 'esc' quit.");
+                Console.WriteLine("Score:"+score);
                 Console.SetCursorPosition(x, y);
                 Console.ForegroundColor = cc;
 
