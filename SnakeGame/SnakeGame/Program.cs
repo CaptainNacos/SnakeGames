@@ -38,7 +38,14 @@ namespace Snake
 
         }
 
-        
+        public void PrintNumberFoodEaten(int numberFoodEaten)
+        {
+            Console.ForegroundColor = Color.Black;
+            Console.SetCursorPosition(1, 0);
+            Console.WriteLine("                     ");
+            Console.SetCursorPosition(1, 0);
+            Console.WriteLine("Food Eaten: " + numberFoodEaten);
+        }
         static void Main(string[] args)
         {
             Program p = new Program();
@@ -47,6 +54,7 @@ namespace Snake
             byte left = 1;
             byte down = 2;
             byte up = 3;
+            int numberFoodEaten = 0;
             int lastFoodTime = 0;
             int foodDissapearTime = 8000;
             int negativePoints = 0;
@@ -75,7 +83,7 @@ namespace Snake
             };
             foreach (Position obstacle in obstacles)
             {
-                Console.ForegroundColor = Color.Cyan;
+                Console.ForegroundColor = Color.Black;
                 Console.SetCursorPosition(obstacle.col, obstacle.row);
                 Console.Write("=");
             }
@@ -94,7 +102,7 @@ namespace Snake
             }
             while (snakeElements.Contains(food) || obstacles.Contains(food));
             Console.SetCursorPosition(food.col, food.row);
-            Console.ForegroundColor = Color.Yellow;
+            Console.ForegroundColor = Color.Black;
             Console.Write("@");
 
             foreach (Position position in snakeElements)
@@ -107,7 +115,7 @@ namespace Snake
             while (true)
             {
                 negativePoints++;
-
+                p.PrintNumberFoodEaten(numberFoodEaten);
                 if (Console.KeyAvailable)
                 {
                     ConsoleKeyInfo userInput = Console.ReadKey();
@@ -149,6 +157,7 @@ namespace Snake
                     //if (userPoints < 0) userPoints = 0;
                     userPoints = Math.Max(userPoints, 0);
                     Console.WriteLine("Your points are: {0}", userPoints);
+                    Console.ReadLine();
                     return;
                 }
 
@@ -167,6 +176,8 @@ namespace Snake
 
                 if (snakeNewHead.col == food.col && snakeNewHead.row == food.row)
                 {
+                    Console.Beep(600, 100);
+                    numberFoodEaten++;
                     // feeding the snake
                     do
                     {
@@ -191,7 +202,7 @@ namespace Snake
                         (food.row != obstacle.row && food.col != obstacle.row));
                     obstacles.Add(obstacle);
                     Console.SetCursorPosition(obstacle.col, obstacle.row);
-                    Console.ForegroundColor = Color.Cyan;
+                    Console.ForegroundColor = Color.Black;
                     Console.Write("=");
                 }
                 else
@@ -217,7 +228,7 @@ namespace Snake
                 }
 
                 Console.SetCursorPosition(food.col, food.row);
-                Console.ForegroundColor = Color.Yellow;
+                Console.ForegroundColor = Color.Black;
                 Console.Write("@");
 
                 sleepTime -= 0.01;
