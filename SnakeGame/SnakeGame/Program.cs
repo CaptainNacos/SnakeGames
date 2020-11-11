@@ -8,7 +8,6 @@ using System.Media;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
-using Console = Colorful.Console;
 
 
 namespace Snake
@@ -40,7 +39,7 @@ namespace Snake
 
         public void PrintNumberFoodEaten(int numberFoodEaten)
         {
-            Console.ForegroundColor = Color.Black;
+            Console.ForegroundColor = ConsoleColor.Black;
             Console.SetCursorPosition(1, 0);
             Console.WriteLine("                     ");
             Console.SetCursorPosition(1, 0);
@@ -49,7 +48,7 @@ namespace Snake
         static void Main(string[] args)
         {
             Program p = new Program();
-            Console.BackgroundColor = Color.White;
+            Console.BackgroundColor = ConsoleColor.White;
             byte right = 0;
             byte left = 1;
             byte down = 2;
@@ -83,7 +82,7 @@ namespace Snake
             };
             foreach (Position obstacle in obstacles)
             {
-                Console.ForegroundColor = Color.Black;
+                Console.ForegroundColor = ConsoleColor.Black;
                 Console.SetCursorPosition(obstacle.col, obstacle.row);
                 Console.Write("=");
             }
@@ -102,13 +101,13 @@ namespace Snake
             }
             while (snakeElements.Contains(food) || obstacles.Contains(food));
             Console.SetCursorPosition(food.col, food.row);
-            Console.ForegroundColor = Color.Black;
+            Console.ForegroundColor = ConsoleColor.Black;
             Console.Write("@");
 
             foreach (Position position in snakeElements)
             {
                 Console.SetCursorPosition(position.col, position.row);
-                Console.ForegroundColor = Color.DarkGray;
+                Console.ForegroundColor = ConsoleColor.DarkGray;
                 Console.Write("*");
             }
 
@@ -151,7 +150,7 @@ namespace Snake
                 if (snakeElements.Contains(snakeNewHead) || obstacles.Contains(snakeNewHead))
                 {
                     Console.SetCursorPosition(0, 0);
-                    Console.ForegroundColor = Color.Red;
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Game over!");
                     int userPoints = (snakeElements.Count - 6) * 100 - negativePoints;
                     //if (userPoints < 0) userPoints = 0;
@@ -162,12 +161,12 @@ namespace Snake
                 }
 
                 Console.SetCursorPosition(snakeHead.col, snakeHead.row);
-                Console.ForegroundColor = Color.DarkGray;
+                Console.ForegroundColor = ConsoleColor.DarkGray;
                 Console.Write("*");
 
                 snakeElements.Enqueue(snakeNewHead);
                 Console.SetCursorPosition(snakeNewHead.col, snakeNewHead.row);
-                Console.ForegroundColor = Color.Gray;
+                Console.ForegroundColor = ConsoleColor.Gray;
                 if (direction == right) Console.Write(">");
                 if (direction == left) Console.Write("<");
                 if (direction == up) Console.Write("^");
@@ -187,7 +186,7 @@ namespace Snake
                     while (snakeElements.Contains(food) || obstacles.Contains(food));
                     lastFoodTime = Environment.TickCount;
                     Console.SetCursorPosition(food.col, food.row);
-                    Console.ForegroundColor = Color.Yellow;
+                    Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.Write("@");
                     sleepTime--;
 
@@ -202,7 +201,7 @@ namespace Snake
                         (food.row != obstacle.row && food.col != obstacle.row));
                     obstacles.Add(obstacle);
                     Console.SetCursorPosition(obstacle.col, obstacle.row);
-                    Console.ForegroundColor = Color.Black;
+                    Console.ForegroundColor = ConsoleColor.Black;
                     Console.Write("=");
                 }
                 else
@@ -228,7 +227,7 @@ namespace Snake
                 }
 
                 Console.SetCursorPosition(food.col, food.row);
-                Console.ForegroundColor = Color.Black;
+                Console.ForegroundColor = ConsoleColor.Black;
                 Console.Write("@");
 
                 sleepTime -= 0.01;

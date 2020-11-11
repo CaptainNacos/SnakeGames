@@ -85,3 +85,10 @@ C:\Users\Low Hong Lin\SnakeGames\SnakeGame\SnakeGame\obj\Debug\Snake.csproj.Core
 C:\Users\Low Hong Lin\SnakeGames\SnakeGame\SnakeGame\obj\Debug\Snake.csproj.CopyComplete
 C:\Users\Low Hong Lin\SnakeGames\SnakeGame\SnakeGame\obj\Debug\Snake.exe
 C:\Users\Low Hong Lin\SnakeGames\SnakeGame\SnakeGame\obj\Debug\Snake.pdb
+D:\SnakeGames\SnakeGame\SnakeGame\obj\Debug\Snake.csprojAssemblyReference.cache
+D:\SnakeGames\SnakeGame\SnakeGame\obj\Debug\Snake.csproj.CoreCompileInputs.cache
+D:\SnakeGames\SnakeGame\SnakeGame\obj\Debug\Snake.exe
+D:\SnakeGames\SnakeGame\SnakeGame\obj\Debug\Snake.pdb
+D:\SnakeGames\SnakeGame\SnakeGame\bin\Debug\Snake.exe.config
+D:\SnakeGames\SnakeGame\SnakeGame\bin\Debug\Snake.exe
+D:\SnakeGames\SnakeGame\SnakeGame\bin\Debug\Snake.pdb
