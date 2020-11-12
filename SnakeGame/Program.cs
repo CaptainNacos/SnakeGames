@@ -312,6 +312,10 @@ namespace Snake
 
         public void DisplayStartScreen()
         {
+            
+            Console.ForegroundColor = Color.Magenta;
+            Console.SetCursorPosition(34, 10);
+            Console.Write("NACOS' SNAKEGAME");
             Console.ForegroundColor = Color.Cyan; //text color for text display
             Console.SetCursorPosition(34, 19);
             Console.Write("HIGH SCORE");
