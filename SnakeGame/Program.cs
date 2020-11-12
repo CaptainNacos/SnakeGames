@@ -312,10 +312,6 @@ namespace Snake
 
         public void DisplayStartScreen()
         {
-            
-            Console.ForegroundColor = Color.Magenta;
-            Console.SetCursorPosition(34, 10);
-            Console.Write("NACOS' SNAKEGAME");
             Console.ForegroundColor = Color.Cyan; //text color for text display
             Console.SetCursorPosition(34, 19);
             Console.Write("HIGH SCORE");
@@ -411,7 +407,7 @@ namespace Snake
             string userName = "-";
             int lifeBonusPoint = 0; //Life bonus point is bonus point added in winning condition with per life left
             string selectedMode;
-            Console.SetWindowSize(80, 30);//reducing screen size 
+            Console.SetWindowSize(110, 30);//reducing screen size 
             Console.SetBufferSize(Console.WindowWidth, Console.WindowHeight);
 
             Position[] directions = new Position[4];
@@ -427,7 +423,7 @@ namespace Snake
             int V = 255;
             int ID = 255;
 
-            Console.WriteAscii("SNAKE", Color.FromArgb(DA, V, ID));
+            Console.WriteAscii("NACOSNEK", Color.FromArgb(DA, V, ID));
 
 
             //Console snake size set with BufferArea using new library

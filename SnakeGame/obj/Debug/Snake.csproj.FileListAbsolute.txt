@@ -76,3 +76,12 @@ E:\Development Project 1\DP1\SnakeGame_P6-master\obj\Debug\Snake.csproj.CoreComp
 E:\Development Project 1\DP1\SnakeGame_P6-master\obj\Debug\Snake.csproj.CopyComplete
 E:\Development Project 1\DP1\SnakeGame_P6-master\obj\Debug\Snake.exe
 E:\Development Project 1\DP1\SnakeGame_P6-master\obj\Debug\Snake.pdb
+D:\SnakeGames\SnakeGame\bin\Debug\Snake.exe.config
+D:\SnakeGames\SnakeGame\bin\Debug\Snake.exe
+D:\SnakeGames\SnakeGame\bin\Debug\Snake.pdb
+D:\SnakeGames\SnakeGame\bin\Debug\Colorful.Console.dll
+D:\SnakeGames\SnakeGame\obj\Debug\Snake.csprojAssemblyReference.cache
+D:\SnakeGames\SnakeGame\obj\Debug\Snake.csproj.CoreCompileInputs.cache
+D:\SnakeGames\SnakeGame\obj\Debug\Snake.csproj.CopyComplete
+D:\SnakeGames\SnakeGame\obj\Debug\Snake.exe
+D:\SnakeGames\SnakeGame\obj\Debug\Snake.pdb
